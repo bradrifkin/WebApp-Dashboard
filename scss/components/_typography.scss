@@ -1,0 +1,38 @@
+/***********************************
+ Typography
+************************************/
+
+body {
+	font-family: $font-stack-primary;
+	color: $white;
+}
+
+main,
+input {
+	color: $color-text;
+}
+
+.page-title {
+	text-align: center;
+	font-size: 1em;
+	font-weight: 100;
+}
+
+.username {
+	font-size: .8em;
+	letter-spacing: .5px;
+}
+
+.logo {
+	font-size: 1.25em;
+	font-weight: 100;
+}
+
+.logo-your {
+	font-weight: 900;
+}
+
+.logo-tm {
+	font-size: .6em;
+	vertical-align: top;
+}

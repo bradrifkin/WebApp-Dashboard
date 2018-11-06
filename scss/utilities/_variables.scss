@@ -1,0 +1,29 @@
+/***********************************
+ Variables
+************************************/
+
+// Colors
+$white: #FFF;
+$off-white: #FBFBFB;
+$not-selected: #A6A6B9;
+
+$color-primary: #7377BF; // purple
+$color-primary-dark: #4D4C72; // dark purple
+$color-secondary: #81C98F; // green
+$color-secondary-dark: #74B1BF; // sea green
+
+$color-text: #676666;
+$color-form-placeholder: #C4C4C4;
+
+// Fonts
+$font-stack-primary: 'Muli', sans-serif;
+
+// Layout
+$max-width: 1150px;
+$gutter: 10px;
+
+// Breakpoints
+$breakpoints: (
+	'med': 768px,
+	'lg': 1024px, 
+);

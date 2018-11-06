@@ -1,0 +1,12 @@
+/***********************************
+ Mixins
+************************************/
+
+// Media queries
+@mixin mq($break) {  
+  $value: map-get($breakpoints, $break);           
+                
+  @media (min-width: $value) {
+      @content;                   
+  }  
+}

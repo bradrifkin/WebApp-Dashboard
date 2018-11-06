@@ -1,0 +1,15 @@
+/***********************************
+ Aside
+************************************/
+
+aside {
+	background-color: #4D4C72;
+	grid-area: aside;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	@include mq('med') {
+		flex-direction: column;
+		justify-content: flex-start;
+	}
+}
