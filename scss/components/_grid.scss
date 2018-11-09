@@ -2,16 +2,36 @@
  Grid
 ************************************/
 
+section {
+	margin: 30px 0;
+	padding-bottom: 20px;
+	border-bottom: 1px solid #D2D2D2;
+	@include mq('med') {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+section.settings {
+	border-bottom: none;
+	padding-bottom: 0;
+	@include mq('med') {
+		padding-bottom: 1em;
+	}
+}
+
 .container {
 	display: grid;
-	grid-template-columns: 1fr;
+	padding-bottom: 1em;
+	grid-template-columns: 100%;
 	grid-template-rows: repeat(2, 80px) 1fr;
 	grid-template-areas:
 		"header"
 		"aside"
 		"main";
 	@include mq('med') {
-		width: 90%;
+		padding-bottom: 0;
+		width: 94%;
 		margin: 0 auto;
 		grid-template-columns: 80px 1fr;
 		grid-template-rows: 80px 1fr;
@@ -20,7 +40,7 @@
 			"aside main";
 	}
 	@include mq('lg') {
-		width: 80%;
+		width: 85%;
 		max-width: 1150px;
 	}
 }
@@ -30,14 +50,32 @@ main {
 	@include mq('med') {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		grid-template-rows: repeat(5, minmax(200px, 1fr));
+		// grid-template-rows: 60px 60px repeat(5, minmax(200px, 1fr));
 		grid-template-areas:
+			"title-and-search title-and-search"
+			"alert alert"
 			"traffic traffic"
 			"daily-traffic mobile-users"
 			"social-stats social-stats"
 			"new-members recent-activity"
 			"message-user settings";
 	}
+}
+
+.title-and-search {
+	grid-area: title-and-search;
+}
+
+.page-title {
+	grid-area: page-title;
+}
+
+.search {
+	grid-area: search;
+}
+
+.alert {
+	grid-area: alert;
 }
 
 .traffic {
@@ -66,8 +104,35 @@ main {
 
 .message-user {
 	grid-area: message-user;
+	@include mq('med') {
+		border-bottom: none;
+		display: flex;
+		flex-direction: column;
+	}
 }
 
 .settings {
 	grid-area: settings;
+	@include mq('med') {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.social-stats,
+.new-members,
+.recent-activity,
+.message-user,
+.settings {
+	@include mq('med') {
+		padding: 1em;
+	}
+}
+
+.daily-traffic,
+.new-members,
+.message-user {
+	@include mq('med') {
+		border-right: 1px solid #D2D2D2;
+	}
 }

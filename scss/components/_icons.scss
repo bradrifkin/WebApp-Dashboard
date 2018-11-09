@@ -7,15 +7,30 @@
 	margin-top: 5px;
 }
 
+.bell-icon {
+	transform-origin: 50% 50%;
+}
+
+.members,
+.visits,
+.settings-icon,
+.dashboard {
+	fill: $not-selected;
+}
+
 .dashboard,
 .members,
 .visits,
-.settings {
+.settings-icon {
 	width: 30px;
 	height: 100%;
 	@include mq('med') {
 		height: 30px;
 	}
+}
+
+.fill-white {
+	fill: $white;
 }
 
 .icon-wrapper {
@@ -52,10 +67,27 @@
 	}
 }
 
-.selected-icon {
-	fill: $white;
+.chevron {
+	margin-left: auto;
+	width: 30px;
+	height: 30px;
 }
 
-.not-selected-icon {
-	fill: $not-selected;
+// Bell transition on hover
+.notification:hover .bell-icon {
+	animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+@-webkit-keyframes swinging{
+	0%{-webkit-transform: rotate(0deg) scale(1.1);}
+	33%{-webkit-transform: rotate(10deg)}
+	66%{-webkit-transform: rotate(-10deg)}
+	100%{-webkit-transform: rotate(0deg) scale(1.1);}
+}
+
+@keyframes swinging{
+	0%{transform: rotate(0deg) scale(1.1);}
+	33%{transform: rotate(10deg)}
+	66%{transform: rotate(-10deg)}
+	100%{transform: rotate(0deg) scale(1.1);}
 }

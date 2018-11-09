@@ -7,7 +7,7 @@ header {
 	grid-area: header;
 	display: flex;
 	align-items: center;
-	padding: 1em;
+	padding: 1.25em;
 }
 
 .notification {
@@ -18,14 +18,24 @@ header {
 	cursor: pointer;
 }
 
-.bell-alert:after {
-    content: "";
-    border-right: 1px solid #5D61BF;
-    padding: 10px 5px 15px 10px;
-    @include mq('med') {
-    	padding: 10px 15px 15px 10px;
-    }
+// .bell-alert:after {
+//     content: "";
+//     border-right: 1px solid #5D61BF;
+//     padding: 10px 5px 15px 10px;
+//     @include mq('med') {
+//     	padding: 10px 15px 15px 10px;
+//     }
+// }
 
+.line {
+	height: 45px;
+	border-right: 1px solid #5D61BF;
+	margin-left: 15px;
+	margin-right: -13px;
+	@include mq('med') {
+		margin-left: 20px;
+		margin-right: -22px;
+	}
 }
 
 .logo {	
@@ -38,5 +48,6 @@ header {
 	width: 7px;
 	border-radius: 50%;
 	position: absolute;
-	top: 4.2em;
+	top: 2px;
+	left: 17px;
 }

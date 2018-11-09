@@ -2,12 +2,11 @@
  Main
 ************************************/
 
-section {
-	background-color: $off-white;
-}
-
 main {
-	padding: 0 1em;
+	padding: .75em;
+	@include mq('med') {
+		padding: 0;
+	}
 }
 
 .alert {
@@ -16,19 +15,31 @@ main {
 	border-radius: 4px;
 	display: flex;
 	align-items: center;
-	padding: 0 10px;
-	margin-bottom: 10px;
+	justify-content: space-between;
+	padding: 10px 7px;
+	margin-bottom: 10px;	
+	@include mq('med') {
+		padding: 1em;
+		margin: 0 1em;
+	}
 }
 
 .alert p {
 	margin-right: 10px;
+	font-size: .8rem;
 }
 
 .alert-text {
 	font-weight: 900;
 	margin-right: 10px;
+	font-size: 1rem;
 }
 
 .alert .fa-times:hover {
 	cursor: pointer;
+}
+
+.title-and-search {
+	display: flex;
+	justify-content: space-between;
 }

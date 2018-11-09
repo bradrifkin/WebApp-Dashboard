@@ -1,0 +1,92 @@
+/***********************************
+ Widgets
+************************************/
+
+.twitter,
+.facebook,
+.google {
+	fill: $white;
+	height: 52px;
+	width: 98%;
+	padding: 10px;
+	margin-top: 5px;
+}
+
+.facebook {
+	margin-top: 0;
+	height: 55px;
+}
+
+.social-wrapper,
+.member-activity-list {
+	margin-top: 15px;
+}
+
+.member-activity-list {
+	margin-bottom: 15px;
+	@include mq('med') {
+		margin-bottom: 0;
+	}
+}
+
+.social-wrapper {
+	@include mq('med') {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+.social-widget {
+	background-color: $off-white;
+	border: 1px solid $not-selected;
+	border-radius: 4px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1em;
+	margin-bottom: 15px;
+	@include mq('med') {
+		flex-direction: row;
+		flex-basis: 32%;
+	}
+}
+
+.purple-circle {
+	background-color: $color-primary;
+}
+
+.social-icon-wrapper {
+	background-color: $color-primary;
+	width: 73px;
+	border-radius: 50%;
+	padding: 5px;
+	margin-bottom: 5px;
+	@include mq('med') {
+		margin-bottom: 0;
+		margin-right: 10px;
+	}
+}
+
+.notification-widgets {
+	// display: flex;
+	// flex-wrap: wrap;
+	// align-items: center;
+	// justify-content: space-between;
+	margin-top: 20px; 
+}
+
+.settings-group {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 24px;
+	@include mq('med') {
+		width: 85%;
+	}
+	@include mq('lg') {
+		width: 70%;
+	}
+}
+
+
+
