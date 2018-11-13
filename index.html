@@ -21,6 +21,13 @@
 			<p class="line"></p>
 			<img class="profile-avatar" src="images/member-2.jpg" alt="image of member 2">
 			<p class="username">Josh Sullivan</p>
+			<div class="bell-messages">
+				<ul>
+					<li>* The social stats widget has been updated</li>
+					<li>* New members have been added</li>
+					<li>* Monthly traffic stats are closed</li>
+				</ul>
+			</div>
 		</header>
 
 		<aside>
@@ -230,9 +237,11 @@
 			<section class="message-user">
 				<h3 class="section-title">Message User</h3>
 
-				<form action="index.html" method="post">
-					<input type="text" id="message-user-search" placeholder="Search for User">
-					<textarea id="message-user-message"  placeholder="Message for User" rows='6'></textarea>
+				<form autocomplete="off" name="messageUserForm" onsubmit="return validateForm()" action="index.html" method="post">
+					<div class="autocomplete">
+						<input type="text" id="message-user-search" placeholder="Search for User" name='searchForUser'>
+					</div>
+					<textarea id="message-user-message"  placeholder="Message for User" rows='6' name='messageForUser'></textarea>
 					<input class="btn btn-success" type="submit" value="Send">
 				</form>
 			</section>
@@ -245,8 +254,8 @@
 					<div class="settings-group">
 						<p>Send Email Notifications</p>
 						<div class="onoffswitch">
-						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
-						    <label class="onoffswitch-label" for="myonoffswitch">
+						    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="emailSwitch" checked>
+						    <label class="onoffswitch-label" for="emailSwitch">
 						        <span class="onoffswitch-inner"></span>
 						        <span class="onoffswitch-switch"></span>
 						    </label>
@@ -256,8 +265,8 @@
 					<div class="settings-group">
 						<p>Set Profile to Public</p>
 						<div class="onoffswitch">
-						    <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="myonoffswitch2" checked>
-						    <label class="onoffswitch-label" for="myonoffswitch2">
+						    <input type="checkbox" name="onoffswitch2" class="onoffswitch-checkbox" id="profileSwitch" checked>
+						    <label class="onoffswitch-label" for="profileSwitch">
 						        <span class="onoffswitch-inner"></span>
 						        <span class="onoffswitch-switch"></span>
 						    </label>
@@ -274,8 +283,8 @@
 						<option value="eastern">Eastern Time (ET)</option>
 					</select>
 					<div class="settings-buttons">
-						<input class="btn btn-success" type="submit" value="Save">
-						<input class="btn btn-cancel" type="reset" value="Cancel">
+						<input class="btn btn-success" type="button" id="saveSettingsBtn" value="Save">
+						<input class="btn btn-cancel" type="reset" id="cancelSettingsBtn" value="Cancel">
 					</div>
 				</form>
 			</section>
