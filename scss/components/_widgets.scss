@@ -31,18 +31,15 @@
 
 .social-wrapper {
 	@include mq('med') {
-		display: flex;
-		justify-content: space-between;
+		@include flexy($just: space-between);
 	}
 }
 
 .social-widget {
+	@include flexy($dir: column, $align: center);
 	background-color: $off-white;
 	border: 1px solid $not-selected;
 	border-radius: 4px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	padding: 1em;
 	margin-bottom: 15px;
 	@include mq('med') {
@@ -68,17 +65,11 @@
 }
 
 .notification-widgets {
-	// display: flex;
-	// flex-wrap: wrap;
-	// align-items: center;
-	// justify-content: space-between;
 	margin-top: 20px; 
 }
 
 .settings-group {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
+	@include flexy($just: space-between, $align: center);
 	margin-bottom: 24px;
 	@include mq('med') {
 		width: 85%;

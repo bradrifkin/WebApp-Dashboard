@@ -3,10 +3,9 @@
 ************************************/
 
 header {
+	@include flexy($align: center);
 	background-color: $color-primary;
 	grid-area: header;
-	display: flex;
-	align-items: center;
 	padding: 1.25em;
 	position: relative;
 }
@@ -18,15 +17,6 @@ header {
 .notification:hover {
 	cursor: pointer;
 }
-
-// .bell-alert:after {
-//     content: "";
-//     border-right: 1px solid #5D61BF;
-//     padding: 10px 5px 15px 10px;
-//     @include mq('med') {
-//     	padding: 10px 15px 15px 10px;
-//     }
-// }
 
 .line {
 	height: 45px;

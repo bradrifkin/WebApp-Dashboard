@@ -10,12 +10,10 @@ main {
 }
 
 .alert {
+	@include flexy($align: center, $just: space-between);
 	background-color: $color-primary;
 	color: $white;
 	border-radius: 4px;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	padding: 10px 7px;
 	margin-bottom: 10px;	
 	@include mq('med') {
@@ -40,6 +38,5 @@ main {
 }
 
 .title-and-search {
-	display: flex;
-	justify-content: space-between;
+	@include flexy($just: space-between);
 }

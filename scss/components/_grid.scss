@@ -41,7 +41,7 @@ section.settings {
 	}
 	@include mq('lg') {
 		width: 85%;
-		max-width: 1150px;
+		max-width: $max-width;
 	}
 }
 
@@ -50,7 +50,6 @@ main {
 	@include mq('med') {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		// grid-template-rows: 60px 60px repeat(5, minmax(200px, 1fr));
 		grid-template-areas:
 			"title-and-search title-and-search"
 			"alert alert"
@@ -105,17 +104,15 @@ main {
 .message-user {
 	grid-area: message-user;
 	@include mq('med') {
+		@include flexy($dir: column);
 		border-bottom: none;
-		display: flex;
-		flex-direction: column;
 	}
 }
 
 .settings {
 	grid-area: settings;
 	@include mq('med') {
-		display: flex;
-		flex-direction: column;
+		@include flexy($dir: column);
 	}
 }
 

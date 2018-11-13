@@ -2,6 +2,20 @@
  Mixins
 ************************************/
 
+// Flex container
+@mixin flexy(
+  $disp: flex,
+  $dir: null,
+  $wrap: null,
+  $just: null,
+  $align: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align;
+}
+
 // Media queries
 @mixin mq($break) {  
   $value: map-get($breakpoints, $break);           

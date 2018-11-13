@@ -7,10 +7,8 @@ canvas {
 }
 
 .traffic-heading {
+	@include flexy($align: center, $just: space-between);
 	padding: 10px 0;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
 	@include mq('med') {
 		padding: 1em 1em 0 1em;
 	}
@@ -22,16 +20,15 @@ canvas {
 	transition: .3s ease-out;
 	border-radius: 20px;
 	font-size: .75em;
+	&:hover {
+		color: $white;
+		cursor: pointer;
+		background-color: $color-secondary;		
+	}
 	@include mq('med') {
 		font-size: 1em;
 		padding: 5px 12px;
 	}
-}
-
-.chartFilters li:hover {
-	color: $white;
-	cursor: pointer;
-	background-color: $color-secondary;
 }
 
 .selectedChart {

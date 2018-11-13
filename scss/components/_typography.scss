@@ -13,8 +13,17 @@ textarea {
 	color: $color-text;
 }
 
-#timezone {
+form #timezone {
 	color: $color-form-placeholder;
+	background-color: $off-white;
+}
+
+option {
+	color: #000;
+}
+
+option.selected-option {
+	color: $color-text;
 }
 
 .page-title {
@@ -57,10 +66,6 @@ textarea {
 	font-weight: 500;
 }
 
-// .section-title:nth-of-type(1) {
-// 	display: inline;
-// }
-
 .social-name {
 	color: $color-primary;
 	font-weight: 900;
@@ -82,8 +87,7 @@ textarea {
 }
 
 .member-activity-list li {
-	display: flex;
-	align-items: center;
+	@include flexy($align: center);
 	margin-bottom: 10px;
 	@include mq('med') {
 		border-bottom: 1px solid #E9E9E9;

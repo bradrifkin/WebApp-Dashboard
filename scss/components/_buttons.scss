@@ -14,25 +14,23 @@
 	cursor: pointer;
 	font-weight: bold;
 	letter-spacing: 1px;
-}
-
-.btn:hover {
-	opacity: .7;
-}
-
-.btn-success {
-	background-color: $color-primary;
-    margin-right: 15px;
-}
-
-.btn-cancel {
-	background-color: #B2B2B2;
+    &:hover {
+        opacity: .7;
+    }
+    &-success {
+        background-color: $color-primary;
+        margin-right: 15px; 
+    }
+    &-cancel {
+        background-color: #B2B2B2;       
+    }
 }
 
 .settings-buttons {
-	display: flex;
+	@include flexy;
 }
 
+// On Off Switch
 .onoffswitch {
     position: relative; width: 90px;
     -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;

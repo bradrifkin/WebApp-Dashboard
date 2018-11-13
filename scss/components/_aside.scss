@@ -3,13 +3,10 @@
 ************************************/
 
 aside {
-	background-color: #4D4C72;
+	@include flexy($just: space-around, $align: center);
+	background-color: $color-primary-dark;
 	grid-area: aside;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
 	@include mq('med') {
-		flex-direction: column;
-		justify-content: flex-start;
+		@include flexy($just: flex-start, $dir: column);
 	}
 }
